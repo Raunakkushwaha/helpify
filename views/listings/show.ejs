@@ -98,12 +98,14 @@
                 <div class="row">
                   <h4><b>All Reviews </b></h4>
                   <% for(review of listing.reviews) {%>
-                    <div class="card col-5 ms-3 mb-3">
+                    <div class="card col-5 ms-3 mb-3" style="width: 15rem;">
                       <div class="card-body">
                         <h5 class="card-title">@<%= review.author.username %>
                         </h5>
-                        <p class="starability-result card-text" data-rating="<%=review.rating %>">
+                        
+                            <p class="starability-result card-text" data-rating="<%=review.rating %>">
                         </p>
+                      
                         <p class="card-text mb-3">
                           <%= review.comment%>
                         </p>
@@ -122,3 +124,5 @@
                 </div>
             <% } %>       
           </div>
+  </div>
+        </div>

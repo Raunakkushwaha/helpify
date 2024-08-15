@@ -51,9 +51,9 @@ app.use(express.static(path.join(__dirname,"/public")));
 
 const store=MongoStore.create({
   mongoUrl:dburl,
- 
+  // mongoUrl:MONGO_URL,
   crypto:{
-    secret:process.env.SECRET,
+    secret:"mysupersecretecode",
   },
   touchAfter:24*3600,
 });
@@ -64,7 +64,7 @@ store.on("error",()=>{
 
 const sessionOptions={
   store,
-  secret:process.env.SECRET,
+  secret:"mysupersecretecode",
   resave:false,
   saveUninitialized:true,
   cookie:{
@@ -75,6 +75,9 @@ const sessionOptions={
 };
 
 
+// app.get("/", (req, res) => {
+//   res.send("Hi, I am root");
+// });
 
 
 app.use(session(sessionOptions));
@@ -95,6 +98,14 @@ app.use((req,res,next)=>{
   next();
 });
 
+// app.get("/demouser",async(req,res)=>{
+//   let fakeUser=new User({
+//     email:"abc@gmail.com",
+//     username:"asdfghj"
+//   });
+//   let registerUser=await User.register(fakeUser,"helloworld");
+//   res.send(registerUser);
+// });
 app.use("/filter",filterRouter);
 app.use("/trending",trendingRouter);
 app.use("/policy",policyRouter);
