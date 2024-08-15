@@ -1,0 +1,91 @@
+<% layout("/layouts/boilerplate") %>
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <h3>Edit your Listing</h3>
+      <br>
+      <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" 
+        enctype="multipart/form-data"
+         novalidate class="needs-validation">
+        <div class="mb-3">
+          <label for="title" class="form label">Title</label>
+          <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control" required/>
+          <div class="valid-feedback">
+            Title Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Please provide a valid Title.
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form label">Discription</label>
+          <textarea name="listing[description]" class="form-control" required>
+            <%= listing.description %></textarea>
+            <div class="valid-feedback">
+              Discription Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please provide Discription.
+            </div>
+        </div>
+ <div class="mb-3">
+   Original Image <br>
+    <img src="<%= originalImageUrl %>" <br>
+ </div>
+    
+        <div class="mb-3">
+          <label for="image" class="form label">Upload new Image</label>
+          <input name="listing[image]"  type="file" class="form-control"/>
+        </div>
+
+        <div class="mb-3">
+          <label for="category" class="form label">Categories</label>
+          <select class="form-select" name="listing[category]" class="form-control" >
+            <option value="<%=listing.category %>"><%=listing.category %></option>
+            <option value="Rooms">Rooms</option>
+            <option value="Iconic Cities">Iconic Cities</option>
+            <option value="Mountains">Mountains</option>
+            <option value="Castles">Castles</option>
+            <option value="Amazing Pools">Amazing Pools</option>
+            <option value="Camping">Camping</option>
+            <option value="Farms">Farms</option>
+            <option value="Sea Side">Sea Side</option>
+            <option value="Boat houses">Boat houses</option>           
+          </select>
+          <div class="invalid-feedback">
+            Please provide a valid category.
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form label">Price</label>
+            <input name="listing[price]" value="<%= listing.price %>"  class="form-control" required/>
+            <div class="invalid-feedback">
+              Please provide a valid Price.
+            </div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form label">Country</label>
+            <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control" required/>
+            <div class="invalid-feedback">
+              Please provide a valid Country.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mb-3">
+          <label for="location" class="form label">Location</label>
+          <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control" required />
+          <div class="invalid-feedback">
+            Please provide a valid Location.
+          </div>
+        </div>
+
+        <button class="btn btn-dark edit-btn mt-3 mb-4">Edit</button>
+
+
+    </div>
+  </div>

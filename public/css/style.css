@@ -1,0 +1,241 @@
+body{ padding: 0px !important;
+  /* margin: 0px !important; */
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    background-color:#fff;
+}
+.fa-earth-americas{
+    color: #fe424d ;
+    font-size: 2rem;
+}
+.brand-Title{
+    color: #fe424d ;
+
+}
+.nav-link{
+
+color: #222222 !important;
+}  
+
+/* +++++++++++++++footer+++++++++++++++++++ */
+.f-info-links a{
+    text-decoration: none !important;
+    color: #222222 !important;
+
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+.f-info-links, .f-info-socials ,.f-info-brand{   
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.f-info-socials i {
+    margin : 1rem;
+    font-size: 1.5rem;
+}   
+
+.f-info {
+    text-align: center;
+    height: 8rem;
+    display: flex;
+    background-color: #ebebee;
+    flex-wrap: wrap;
+    justify-content: center ;
+    align-items:space-evenly  ; 
+ }
+/* ===========card========== */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+} 
+.card-body{
+    padding: 0 !important;
+}
+.card-text p{
+    font-weight: 400;
+}
+.listing-link{
+    text-decoration: none;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white;
+}
+
+.add-btn{
+    background-color: #fe424d !important ;
+    border: none !important;
+}
+.edit-btn{
+    background-color: #fe424d !important ;
+    border: none !important;
+
+}
+
+
+/* =================filter=========================== */
+.navbar{
+  background-color: #fff;
+}
+  .filter{
+      text-align: center;
+      margin-right: 1.6rem;
+       
+  }
+  .filter:hover{
+    opacity: 1;
+    cursor:pointer;
+  }
+   .filter p{
+    font-size: 0.8rem;
+   }
+   .filter-link {
+    text-decoration: none;
+    color: black;
+  }
+   .filter-nav{
+    background-color: #fff !important;
+   }
+.tax-info{
+  display: none;
+}
+
+.tax-toggle{
+  border:1px solid black;
+  border-radius: 1rem;
+  height: 3rem;
+  width: 15rem;
+  padding: 0.6rem;
+  align-items: center;
+  align-self: center;
+  margin-left: 1rem;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+/* ======================= */ 
+.show-img{
+    height: 30vh;
+}
+
+.btns{
+    display: flex;
+}
+.show-card  {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.butt{
+    width: 5rem;
+
+}
+/* +++++++++++++map+++++++++++++ */
+.listing-link {
+    padding-top: 1rem;
+}
+a{
+    color: black !important;
+ 
+}
+
+/* ===============================trending================================== */
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.slide {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.img-slide {
+    min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+.container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-container {
+  margin: 0 30px;
+  overflow: hidden;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+}
+.card .image-box {
+  height: 200px;
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.card .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+.card .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.profile-details .name {
+  font-size: 15px;
+  font-weight: 500;
+}
+.profile-details .job {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+
+.swiper-navBtn {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+}

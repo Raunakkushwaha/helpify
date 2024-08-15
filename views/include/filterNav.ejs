@@ -1,0 +1,138 @@
+<nav class="filter-nav navbar navbar-expand-lg bg-body-tertiary nav2" style=" background-color: #fff !important;">
+    <div class="container-fluid">
+
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup3"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <b> <a class="navbar-brand">Filters</a></b>
+        <i class="fa-solid fa-filter"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup3" style="height: 0.5rem">
+        <div class="navbar-nav ">
+          <div class="filter">
+            <div><a class="filter-link" href="/trending">
+                <i class="fa-solid fa-fire"></i>
+                <p>Trending</p>
+              </a>
+            </div>
+
+            </a>
+          </div>
+
+          <div class="filter">
+            <div><a class="filter-link" href="/filter?search=Rooms">
+                <i class="fa-solid fa-bed"></i>
+                <p>Rooms</p>
+              </a>
+
+            </div>
+
+
+          </div>
+
+          <div class="filter">
+            <div>
+              <a class="filter-link" href="/filter?search=Iconic Cities">
+                <i class="fa-solid fa-mountain-city"></i>
+                <p>Iconic Cities</p>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="filter">
+            <div>
+              <a class="filter-link" href="/filter?search=Mountains">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <p>Mountains</p></a>
+            </div>
+         
+          </div>
+
+          <div class="filter">
+            <div>
+              <a class="filter-link" href="/filter?search=Castles">
+                <i class="fa-brands fa-fort-awesome"></i>
+                <p>Castles</p></a>
+            </div>
+            
+          </div>
+
+          <div class="filter">
+            <div>
+              <a class="filter-link" href="/filter?search=Amazing Pools">
+                <i class="fa-solid fa-person-swimming"></i>
+                <p>Amazing Pools</p></a>
+            </div>
+          
+          </div>
+
+          <div class="filter">
+            <div>
+              <a class="filter-link" href="/filter?search=Camping">
+                <i class="fa-solid fa-tents"></i>
+                <p>Camping</p></a>
+            </div>
+            
+          </div>
+
+          <div class="filter">
+            <div>
+              <a class="filter-link" href="/filter?search=Farms">
+                <i class="fa-solid fa-tractor"></i>
+                <p>Farms</p></a>
+            </div>
+       
+          </div>
+
+          <div class="filter">
+            <div>
+              <a class="filter-link" href="/filter?search=Sea Side">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <p>Sea Side</p></a>
+            </div>
+        
+          </div>
+
+
+          <div class="filter">
+            <div>
+              <a class="filter-link" href="/filter?search=Boat houses">
+                <i class="fa-solid fa-ship"></i>
+                <p>Boat houses</p>
+              </a>
+            </div>
+           
+
+          </div>
+
+          <div class="tax-toggle ">
+            <div class="form-check-reverse form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault"><b>Display Total Taxes</b></label>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </nav>
+
+  
+  <script>
+    let taxSwitch = document.getElementById("flexSwitchCheckDefault");
+    taxSwitch.addEventListener("click", () => {
+      let taxInfo = document.getElementsByClassName("tax-info");
+      for (info of taxInfo) {
+        if (info.style.display != "inline") {
+          info.style.display = "inline";
+        }
+        else {
+          info.style.display = "none";
+        }
+      }
+    });
+  </script>

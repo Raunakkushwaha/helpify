@@ -1,0 +1,106 @@
+<% layout("/layouts/boilerplate") %>
+<link rel="stylesheet" href="/css/swiper-bundle.min.css">
+
+<body>
+
+
+  <h2>Place You want to visit. </h2>  
+    <div class="slide">
+         
+        <div class="img-slide">
+        
+     
+            <div class="container swiper">
+                <div class="slide-container">
+                  <div class="card-wrapper swiper-wrapper">
+
+
+                    <% for(let listing of allListings) { %>
+                      
+                    <div class="card swiper-slide">
+                      <div class="image-box">
+                        <a href="/listings/<%=listing._id%>">
+                        <img src="<%=listing.image.url %>" alt="" /></a>
+                      </div>
+                      <div class="profile-details">
+                    
+                        <div class="name-job">
+                          <h4 class="job"><%= listing.title %></h4>
+                        </div>
+                      </div>
+                    </div>
+                    <% } %>
+
+                  </div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+    </div>
+</div>
+
+
+
+<!-- =========================== -->
+
+<h2>Popular city in india.</h2>
+
+<div >
+
+<div class="card mb-3 " style="max-width: 50rem; margin: 2rem;">
+  <div class="row g-0">
+    <div class="col-md-4" style="max-width: 20rem;">
+      <img src="https://images.unsplash.com/photo-1606821356392-a0343ddfcfe1?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body p-3" >
+        <h5 class="card-title">Mumbai</h5>
+        <p class="card-text">Mumbai (formerly called Bombay) is a densely populated city on India’s west coast. A financial center, it's India's largest city. On the Mumbai Harbour waterfront stands the iconic Gateway of India stone arch, built by the British Raj in 1924. Offshore, nearby Elephanta Island holds ancient cave temples dedicated to the Hindu god Shiva. The city's also famous as the heart of the Bollywood film industry.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 month ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card mb-3 " style="max-width: 50rem; margin: 2rem;">
+  <div class="row g-0">
+    <div class="col-md-4" style="max-width: 20rem;">
+      <img src="https://images.unsplash.com/photo-1544693337-c8ec5e2094ce?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body p-3">
+        <h5 class="card-title">Jaipur</h5>
+        <p class="card-text">Jaipur is the capital of India’s Rajasthan state. It evokes the royal family that once ruled the region and that, in 1727, founded what is now called the Old City, or “Pink City” for its trademark building color. At the center of its stately street grid (notable in India) stands the opulent, colonnaded City Palace complex. With gardens, courtyards and museums, part of it is still a royal residence.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 month ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mb-3 " style="max-width: 50rem; margin: 2rem;">
+  <div class="row g-0">
+    <div class="col-md-4" style="max-width: 20rem;">
+      <img src="https://images.unsplash.com/photo-1707992504995-c7916cb11133?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body p-3">
+        <h5 class="card-title">Hyderabad</h5>
+        <p class="card-text">Hyderabad is the capital of southern India's Telangana state. A major center for the technology industry, it's home to many upscale restaurants and shops. Its historic sites include Golconda Fort, a former diamond-trading center that was once the Qutb Shahi dynastic capital. The Charminar, a 16th-century mosque whose 4 arches support towering minarets, is an old city landmark near the long-standing Laad Bazaar.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 month ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+ 
+
+
+      
+</body>
+
+<script src="/js/swiper-bundle.min.js"></script>
+<script src="/js/script1.js"></script>
